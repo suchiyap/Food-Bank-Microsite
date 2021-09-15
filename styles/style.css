@@ -1,0 +1,529 @@
+@-webkit-keyframes fadeinfromtop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeinfromtop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeinfrombottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeinfrombottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeoutfromtop {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+}
+
+@keyframes fadeoutfromtop {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+}
+
+@-webkit-keyframes fadeoutfrombottom {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+}
+
+@keyframes fadeoutfrombottom {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Avenir", sans-serif;
+  color: #212427;
+  background-color: #FFFFFF;
+}
+
+.header-banner {
+  height: 100vh;
+  background: url("../assets/image/bg-banner.jpg") center no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+}
+
+.header-banner .header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  -webkit-animation: fadeinfromtop 1s ease-in;
+          animation: fadeinfromtop 1s ease-in;
+}
+
+.header-banner .header-wrapper h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+}
+
+.header-banner .header-wrapper p.primary-desc {
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  max-width: 490px;
+  -webkit-animation: fadeinfromtop 1.2s ease-in;
+          animation: fadeinfromtop 1.2s ease-in;
+}
+
+.header-banner .header-wrapper p.secondary-desc {
+  -webkit-animation: fadeinfromtop 1.4s ease-in;
+          animation: fadeinfromtop 1.4s ease-in;
+}
+
+.barcode-section {
+  position: relative;
+  min-height: 560px;
+}
+
+.barcode-section .phone-overlay {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+}
+
+.barcode-section .phone-overlay .phone-img {
+  position: relative;
+  max-width: 90vw;
+}
+
+.barcode-section .phone-overlay .button-dl-overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.barcode-wrapper {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 7rem;
+}
+
+.barcode-wrapper .showBarcode {
+  opacity: 0;
+}
+
+.barcode-wrapper .fadeinbottom {
+  opacity: 1;
+  -webkit-animation: fadeinfrombottom 1.5s ease-in;
+          animation: fadeinfrombottom 1.5s ease-in;
+}
+
+.barcode-wrapper .fadeoutbottom {
+  opacity: 0;
+  -webkit-animation: fadeoutfrombottom 1.5s ease-out;
+          animation: fadeoutfrombottom 1.5s ease-out;
+}
+
+.function-section, .mob-function-section {
+  margin-top: 5rem;
+}
+
+.function-section .function-wrapper, .mob-function-section .function-wrapper {
+  opacity: 0;
+}
+
+.function-section .function-wrapper.fadeinbottom, .mob-function-section .function-wrapper.fadeinbottom {
+  opacity: 1;
+  -webkit-animation: fadeinfrombottom 0.8s ease-in;
+          animation: fadeinfrombottom 0.8s ease-in;
+}
+
+.function-section .function-wrapper.fadeintop, .mob-function-section .function-wrapper.fadeintop {
+  opacity: 1;
+  -webkit-animation: fadeinfromtop 0.8s ease-in;
+          animation: fadeinfromtop 0.8s ease-in;
+}
+
+.function-section .function-wrapper.fadeoutbottom, .mob-function-section .function-wrapper.fadeoutbottom {
+  opacity: 0;
+  -webkit-animation: fadeoutfrombottom 0.8s ease-out;
+          animation: fadeoutfrombottom 0.8s ease-out;
+}
+
+.function-section .function-wrapper.fadeouttop, .mob-function-section .function-wrapper.fadeouttop {
+  opacity: 0;
+  -webkit-animation: fadeoutfromtop 0.8s ease-in;
+          animation: fadeoutfromtop 0.8s ease-in;
+}
+
+.function-section .function-wrapper .yellow-pill, .mob-function-section .function-wrapper .yellow-pill {
+  background-color: #FFDC19;
+  max-width: 320px;
+  height: 70px;
+  -webkit-box-shadow: 0px 10px 26px #00000029;
+          box-shadow: 0px 10px 26px #00000029;
+  border-radius: 56px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.function-section .function-wrapper .yellow-pill span, .mob-function-section .function-wrapper .yellow-pill span {
+  padding-left: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.function-section .function-wrapper .function-desc, .mob-function-section .function-wrapper .function-desc {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.middle-phone-slicer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.middle-phone-slicer.fadeinbottom {
+  opacity: 1;
+  -webkit-animation: fadeinfrombottom 1s ease-in;
+          animation: fadeinfrombottom 1s ease-in;
+}
+
+.empty-space {
+  height: 130px;
+}
+
+.about-us-section {
+  background-image: url("../assets/image/about-us-bg.png");
+  min-height: 100vh;
+  margin-top: 5rem;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.about-us-section h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+}
+
+.about-us-section h2.fadeinbottom {
+  opacity: 1;
+  -webkit-animation: fadeinfrombottom 1s ease-in;
+          animation: fadeinfrombottom 1s ease-in;
+}
+
+.about-us-section p {
+  margin-bottom: 2.5rem;
+  opacity: 0;
+}
+
+.about-us-section p.fadeinbottom {
+  opacity: 1;
+  -webkit-animation: fadeinfrombottom 2s ease-in;
+          animation: fadeinfrombottom 2s ease-in;
+}
+
+.about-us-section .objective-container {
+  border-radius: 0px 75px 75px 75px;
+  background-color: #FFDC19;
+  padding: 3rem;
+}
+
+.about-us-section .objective-container h2 {
+  margin-bottom: .5rem;
+}
+
+.about-us-section .objective-container h2.fadeintop {
+  opacity: 1;
+  -webkit-animation: fadeinfromtop 1s ease-in;
+          animation: fadeinfromtop 1s ease-in;
+}
+
+.about-us-section .objective-container h2.fadeoutbottom {
+  opacity: 0;
+  -webkit-animation: fadeoutfrombottom 0.8s ease-out;
+          animation: fadeoutfrombottom 0.8s ease-out;
+}
+
+.about-us-section .objective-container p.fadeintop {
+  opacity: 1;
+  -webkit-animation: fadeinfromtop 1s ease-in;
+          animation: fadeinfromtop 1s ease-in;
+}
+
+.about-us-section .objective-container p.fadeoutbottom {
+  opacity: 0;
+  -webkit-animation: fadeoutfrombottom 0.8s ease-out;
+          animation: fadeoutfrombottom 0.8s ease-out;
+}
+
+.sponsor-section {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.sponsor-section h3 {
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.sponsor-section p {
+  padding-bottom: 5rem;
+}
+
+.sponsor-section .sponsor-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sponsor-section .sponsor-logo img {
+  padding-bottom: 1rem;
+}
+
+.contact-us-section {
+  background-image: url("../assets/image/contact-us-bg.jpg");
+  min-height: 100vh;
+  margin-top: 5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.contact-us-section .btn-yellow-pill {
+  background-color: #FFDC19;
+  -webkit-box-shadow: 0px 6px 12px #00000029;
+          box-shadow: 0px 6px 12px #00000029;
+  border-radius: 25px;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  color: #212427;
+}
+
+footer {
+  position: relative;
+  background-color: #FFDC19;
+  padding-top: 5rem;
+  padding-bottom: .5rem;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #212427;
+}
+
+footer .footer-logo {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+footer .copyright {
+  position: relative;
+  padding-right: 1rem;
+}
+
+footer .copyright::after {
+  content: "";
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #212427;
+  right: 5%;
+  top: 30%;
+}
+
+@media screen and (max-width: 1024px) {
+  .header-banner {
+    height: 60vh;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+  }
+  .header-banner .header-wrapper p.secondary-desc {
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header-banner {
+    height: 75vh;
+  }
+  .barcode-section .phone-overlay {
+    -webkit-transform: translate(-50%, -10%);
+            transform: translate(-50%, -10%);
+  }
+  .mob-function-section {
+    margin-top: 2rem;
+    position: relative;
+    padding-top: 1rem;
+  }
+  .mob-function-section #mobFuncContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mob-function-section .bg-overlay-black {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+  }
+  .mob-function-section .mob-middle-phone-slicer {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .mob-function-section .mob-middle-phone-slicer.fadeinbottom {
+    opacity: 1;
+    -webkit-animation: fadeinfrombottom 1s ease-in;
+            animation: fadeinfrombottom 1s ease-in;
+  }
+  .mob-function-section .empty-space {
+    height: 100px;
+  }
+  .mob-function-section .function-wrapper {
+    z-index: 2;
+  }
+  .mob-function-section .function-wrapper .function-desc {
+    color: #FFFFFF;
+  }
+  .about-us-section {
+    background-image: none;
+  }
+  .about-us-section .about-us-content {
+    text-align: center;
+  }
+  .about-us-section .mobile-about-us-bg {
+    background-image: url("../assets/image/mobiel-aboutus-bg.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 90vh;
+  }
+  footer .footer-logo {
+    top: -34%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

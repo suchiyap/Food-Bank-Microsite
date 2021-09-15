@@ -1,0 +1,384 @@
+@import "./variables";
+@import "./animation";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: $fontFamily;
+    color: $primaryColor;
+    background-color: $fontWithBG;
+}
+
+.header-banner{
+    height: 100vh;
+    background: url('../assets/image/bg-banner.jpg') center no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+
+    .header-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: $fontWithBG;
+        text-align: center;
+        animation: fadeinfromtop 1s ease-in;
+
+        h1{
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: clamp(2rem, 4.5vw, 4rem);
+        }
+
+        p.primary-desc{
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+            max-width: 490px;
+            animation: fadeinfromtop 1.2s ease-in;
+        }
+        p.secondary-desc{
+            animation: fadeinfromtop 1.4s ease-in;
+        }
+    }
+}
+
+.barcode-section{
+    position: relative;
+    min-height: 560px;
+
+    .phone-overlay{
+        position: absolute;
+        top: -20%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+
+        .phone-img{
+            position: relative;
+            max-width: 90vw;
+        }
+
+        .button-dl-overlay{
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }   
+}
+
+.barcode-wrapper{
+    align-content: center;
+    margin-top: 7rem;
+
+    .showBarcode{
+        opacity: 0;
+    }
+
+    .fadeinbottom{
+        opacity: 1;
+        animation: fadeinfrombottom 1.5s ease-in;
+    }
+
+    .fadeoutbottom{
+        opacity: 0;
+        animation: fadeoutfrombottom 1.5s ease-out;
+    }
+}
+
+.function-section, .mob-function-section{
+    margin-top: 5rem;
+    .function-wrapper{
+        opacity: 0;
+        &.fadeinbottom{
+            opacity: 1;
+            animation: fadeinfrombottom 0.8s ease-in;
+        }
+        
+        &.fadeintop{
+            opacity: 1;
+            animation: fadeinfromtop 0.8s ease-in;
+        }
+        
+        &.fadeoutbottom{
+            opacity: 0;
+            animation: fadeoutfrombottom 0.8s ease-out;
+        }
+        
+        &.fadeouttop{
+            opacity: 0;
+            animation: fadeoutfromtop 0.8s ease-in;
+        }
+        .yellow-pill{
+            background-color: $yellowColor;
+            max-width: 320px;
+            height: 70px;
+            box-shadow: 0px 10px 26px #00000029;
+            border-radius: 56px;
+            margin: auto;
+            display: flex;
+            padding: 1rem;
+            align-items: center;
+    
+            span{
+                padding-left: 1rem;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        }
+    
+        .function-desc{
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+    }
+}
+
+.middle-phone-slicer{
+    position: sticky;
+    top: 0;
+
+    &.fadeinbottom{
+        opacity: 1;
+        animation: fadeinfrombottom 1s ease-in;
+    }
+}
+
+.empty-space{
+    height: 130px;
+}
+
+.about-us-section{
+    background-image: url('../assets/image/about-us-bg.png');
+    min-height: 100vh;
+    margin-top: 5rem;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    h2{
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+        opacity: 0;
+
+        &.fadeinbottom{
+            opacity: 1;
+            animation: fadeinfrombottom 1s ease-in;
+        }
+    }
+
+    p{
+        margin-bottom: 2.5rem;
+        opacity: 0;
+
+        &.fadeinbottom{
+            opacity: 1;
+            animation: fadeinfrombottom 2s ease-in;
+        }
+    }
+
+    .objective-container{
+        border-radius: 0px 75px 75px 75px;
+        background-color: $yellowColor;
+        padding: 3rem;
+
+        h2{
+            margin-bottom: .5rem;
+
+            &.fadeintop{
+                opacity: 1;
+                animation: fadeinfromtop 1s ease-in;
+            }
+            &.fadeoutbottom{
+                opacity: 0;
+                animation: fadeoutfrombottom 0.8s ease-out;
+            }
+        }
+
+        p{
+            &.fadeintop{
+                opacity: 1;
+                animation: fadeinfromtop 1s ease-in;
+            }
+            &.fadeoutbottom{
+                opacity: 0;
+                animation: fadeoutfrombottom 0.8s ease-out;
+            }
+        }
+    }
+}
+
+.sponsor-section{
+    margin-top: 5rem;
+    text-align: center;
+
+    h3{
+        margin-bottom: 3rem;
+        font-weight: bold;
+    }
+
+    p{
+        padding-bottom: 5rem;
+    }
+
+    .sponsor-logo{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        img{
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+.contact-us-section{
+    background-image: url('../assets/image/contact-us-bg.jpg');
+    min-height: 100vh;
+    margin-top: 5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    .btn-yellow-pill{
+        background-color: $yellowColor;
+        box-shadow: 0px 6px 12px #00000029;
+        border-radius: 25px;
+        padding: 1rem 3rem;
+        text-decoration: none;
+        color: $primaryColor;
+    }
+}
+
+footer{
+    position: relative;
+    background-color: $yellowColor;
+    padding-top: 5rem;
+    padding-bottom: .5rem;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    a{
+        text-decoration: none;
+        color: $primaryColor;
+    }
+
+    .footer-logo{
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .copyright{
+        position: relative;
+        padding-right: 1rem;
+        &::after{
+            content: "";
+            width: 0.3rem;
+            height: 0.3rem;
+            border-radius: 50%;
+            position: absolute;
+            background-color: $primaryColor;
+            right: 5%;
+            top: 30%;
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    .header-banner{
+        height: 60vh;
+        clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+
+        .header-wrapper{
+            p.secondary-desc{
+                margin-bottom: 5rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1023px){
+    .header-banner{
+        height: 75vh;
+    }
+
+    .barcode-section{
+        .phone-overlay{
+            transform: translate(-50%, -10%);
+        }
+    }
+
+    .mob-function-section{
+        margin-top: 2rem;
+        position: relative;
+        padding-top: 1rem;
+
+        #mobFuncContent{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bg-overlay-black{
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            top: 0%;
+            left: 0%;
+            height: 100%;
+            transition: all .5s ease-in;
+        }
+
+        .mob-middle-phone-slicer{
+            position: sticky;
+            top: 0;
+            max-height: 100vh;
+            object-fit: contain;
+
+            &.fadeinbottom{
+                opacity: 1;
+                animation: fadeinfrombottom 1s ease-in;
+            }
+        }
+
+        .empty-space{
+            height: 100px;
+        }
+
+        .function-wrapper{
+            z-index: 2;
+
+            .function-desc{
+                color: $fontWithBG;
+            }
+        }
+    }
+
+    .about-us-section{
+        background-image:none;
+        .about-us-content{
+            text-align: center;
+        }
+        .mobile-about-us-bg{
+            background-image: url('../assets/image/mobiel-aboutus-bg.png');
+            background-size: cover;
+            background-position: left;
+            background-repeat: no-repeat;
+            height: 90vh;
+        }
+    }
+
+    footer{
+        .footer-logo{
+            top: -34%;
+        }
+    }
+}
